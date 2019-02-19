@@ -26,18 +26,19 @@ h1 {
 }
 
 #menu a {
-  padding-top: 0.5em;
   display: inline-block;
   color: white;
   text-decoration: none;
 }
 
 #menu .left {
+  padding-top: 0.5em;
   position: absolute;
   margin-left: 5px;
 }
 
 #menu .right {
+  padding-top: 0.5em;
   display: inline-block;
   text-align: right;
   width: 100%;

@@ -27,11 +27,11 @@ def run():
             "menu": render_page(
                 'templates/menu.html.jinja',
                 {
-                    "current_page": "Getting started",
+                    "current_page": "Home",
                     "menu_items": menu_items,
                 }
             ),
-            "content": render_page('templates/getting-started.html.jinja'),
+            "content": render_page('templates/home.html.jinja'),
         }
     )
     with open('index.html', 'w') as f:

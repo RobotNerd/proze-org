@@ -1,7 +1,11 @@
 <div id="menu">
   <span class="left">
     <!-- TODO icon -->
-    <span><a href="http://proze.org">proze</a></span>
+    {% if current_page == 'Home' %}
+      <span class="selected">proze</span>
+    {% else %}
+      <span><a href="http://proze.org">proze</a></span>
+    {% endif %}
   </span>
   <span class="right">
     {%- for item in menu_items %}
