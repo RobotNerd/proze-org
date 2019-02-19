@@ -12,21 +12,14 @@ menu_items = [
     Menu('Tools', 'tools.html'),
     Menu('Documentation', 'documentation.html'),
 ]
-styles = [
-    'body',
-    'menu',
-    'banner',
-]
 
 
 def build_styles():
     """Generate CSS file from sass files."""
-    css = ''
-    for style in styles:
-        css += sass.compile(
-            filename='styles/{}.scss'.format(style),
-            output_style='compressed'
-        )
+    css = sass.compile(
+        filename='styles/main.scss',
+        output_style='compressed'
+    )
     with open('main.css', 'w') as f:
         f.write(css)
 
