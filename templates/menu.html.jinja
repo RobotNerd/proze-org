@@ -1,0 +1,11 @@
+<div id="menu">
+  <span class="left">
+    <!-- TODO icon -->
+    <span><a href="http://proze.org">proze</a></span>
+  </span>
+  <span class="right">
+    {%- for item in menu_items %}
+      <span><a href="http://proze.org/{{ item.route }}">{{ item.name }}</a></span>
+    {%- endfor %}
+  </span>
+</div>
