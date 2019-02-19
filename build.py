@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-from jinja2 import Template
 from collections import namedtuple
+from jinja2 import Template
+import htmlmin
 
 
 Menu = namedtuple('Menu', ['name', 'route'])
@@ -35,7 +36,7 @@ def run():
         }
     )
     with open('index.html', 'w') as f:
-        f.write(index)
+        f.write(htmlmin.minify(index))
 
 
 if __name__ == "__main__":
