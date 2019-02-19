@@ -1,0 +1,39 @@
+#menu {
+  width: 100%;
+  height: 2em;
+  background-color: #252525;
+  color: white;
+  font-variant: small-caps;
+  padding: 5px 0 5px 0;
+}
+
+#menu a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+#menu .left {
+  padding-top: 0.5em;
+  position: absolute;
+  margin-left: 5px;
+}
+
+#menu .right {
+  padding-top: 0.5em;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+#menu .right span {
+  margin-right: 10px;
+}
+
+#menu .selected {
+  color: darkgray;
+}
+
+#menu .selected:hover {
+  cursor: default;
+}

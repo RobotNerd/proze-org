@@ -1,0 +1,22 @@
+#banner {
+  background-size: 100% 200%;
+  background-image: url("images/banner.jpg");
+  background-color: #151515;
+  display: block;
+  height: 200px;
+  color: white;
+}
+
+#banner .title {
+  font-weight: bold;
+  font-size: 3.5em;
+  margin: 20px;
+}
+
+#banner .tagline {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  margin-top: 100px;
+  width: 95%;
+}
