@@ -5,18 +5,18 @@
   display: block;
   height: 200px;
   color: white;
-}
 
-#banner .title {
-  font-weight: bold;
-  font-size: 3.5em;
-  margin: 20px;
-}
+  .title {
+    font-weight: bold;
+    font-size: 3.5em;
+    margin: 20px;
+  }
 
-#banner .tagline {
-  display: block;
-  text-align: right;
-  font-style: italic;
-  margin-top: 100px;
-  width: 95%;
+  .tagline {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    margin-top: 100px;
+    width: 95%;
+  }
 }

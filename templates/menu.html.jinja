@@ -12,7 +12,7 @@
       {% if item.name == current_page %}
         <span class="selected">{{ item.name }}</span>
       {% else %}
-        <span><a href="http://proze.org/{{ item.route }}">{{ item.name }}</a></span>
+        <span><a href="{{ item.route }}">{{ item.name }}</a></span>
       {% endif %}
     {%- endfor %}
   </span>
