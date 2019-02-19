@@ -22,7 +22,6 @@ h1 {
   background-color: #252525;
   color: white;
   font-variant: small-caps;
-  font-weight: bold;
   padding: 5px 0 5px 0;
 }
 
@@ -46,6 +45,14 @@ h1 {
 
 #menu .right span {
   margin-right: 10px;
+}
+
+#menu .selected {
+  color: darkgray;
+}
+
+#menu .selected:hover {
+  cursor: default;
 }
 
 #banner {

@@ -20,14 +20,18 @@ def render_page(path, args={}):
 
 def run():
     banner = render_page('templates/banner.html.jinja')
-    menu = render_page('templates/menu.html.jinja', {"menu_items": menu_items})
-    getting_started = render_page('templates/getting-started.html.jinja')
     index = render_page(
         'templates/index.html.jinja',
         {
             "banner": banner,
-            "menu": menu,
-            "content": getting_started,
+            "menu": render_page(
+                'templates/menu.html.jinja',
+                {
+                    "current_page": "Getting started",
+                    "menu_items": menu_items,
+                }
+            ),
+            "content": render_page('templates/getting-started.html.jinja'),
         }
     )
     with open('index.html', 'w') as f:

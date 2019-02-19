@@ -5,7 +5,11 @@
   </span>
   <span class="right">
     {%- for item in menu_items %}
-      <span><a href="http://proze.org/{{ item.route }}">{{ item.name }}</a></span>
+      {% if item.name == current_page %}
+        <span class="selected">{{ item.name }}</span>
+      {% else %}
+        <span><a href="http://proze.org/{{ item.route }}">{{ item.name }}</a></span>
+      {% endif %}
     {%- endfor %}
   </span>
 </div>
