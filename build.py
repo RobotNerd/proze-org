@@ -6,7 +6,7 @@ import sass
 
 
 Menu = namedtuple('Menu', ['name', 'route'])
-menu_items = [
+MENU_ITEMS = [
     Menu('Getting started', 'getting-started.html'),
     Menu('Syntax', 'syntax.html'),
     Menu('Tools', 'tools.html'),
@@ -27,22 +27,30 @@ def build_styles():
 def build_pages():
     """Generate html content."""
     banner = render_page('templates/banner.html.jinja')
-    index = render_page(
-        'templates/index.html.jinja',
+    generate_page_content(banner, 'Home', 'index.html')
+    generate_page_content(banner, 'Getting started', 'getting-started.html')
+    generate_page_content(banner, 'Syntax', 'syntax.html')
+    generate_page_content(banner, 'Tools', 'tools.html')
+    generate_page_content(banner, 'Documentation', 'documentation.html')
+
+
+def generate_page_content(banner, page_name, filename):
+    content = render_page(
+        'templates/base.html.jinja',
         {
             "banner": banner,
             "menu": render_page(
                 'templates/menu.html.jinja',
                 {
-                    "current_page": "Home",
-                    "menu_items": menu_items,
+                    "current_page": page_name,
+                    "menu_items": MENU_ITEMS,
                 }
             ),
-            "content": render_page('templates/home.html.jinja'),
+            "content": render_page('templates/{}.jinja'.format(filename)),
         }
     )
-    with open('index.html', 'w') as f:
-        f.write(htmlmin.minify(index))
+    with open(filename, 'w') as f:
+        f.write(htmlmin.minify(content))
 
 
 def render_page(path, args={}):
