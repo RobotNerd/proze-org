@@ -28,10 +28,8 @@ def build_pages():
     """Generate html content."""
     banner = render_page('templates/banner.html.jinja')
     generate_page_content(banner, 'Home', 'index.html')
-    generate_page_content(banner, 'Getting started', 'getting-started.html')
-    generate_page_content(banner, 'Syntax', 'syntax.html')
-    generate_page_content(banner, 'Tools', 'tools.html')
-    generate_page_content(banner, 'Documentation', 'documentation.html')
+    for menu_item in MENU_ITEMS:
+        generate_page_content(banner, menu_item.name, menu_item.route)
 
 
 def generate_page_content(banner, page_name, filename):
