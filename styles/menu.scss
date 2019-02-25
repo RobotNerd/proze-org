@@ -6,6 +6,7 @@
   background-color: $background-light;
   font-variant: small-caps;
   padding: 5px 0 5px 0;
+  margin-top: 0.5em;
 
   a {
     color: $menu-color;
@@ -13,13 +14,11 @@
   }
 
   .left {
-    padding-top: 0.5em;
     position: absolute;
     margin-left: 5px;
   }
 
   .right {
-    padding-top: 0.5em;
     display: inline-block;
     text-align: right;
     width: 100%;
@@ -32,20 +31,34 @@
   // Vertical menu for small screens
   @media only screen and (max-width: 600px) {
     height: auto;
+    margin-left: 5px;
+
+    .left {
+      margin-left: 0;
+    }
+
+    .right {
+      margin-left: 5px;
+    }
 
     .left, .right {
-      display: block;
+      display: inline;
       position: relative;
-      margin-left: 5px;
-      width: 100%;
+      width: auto;
     }
 
     .left span, .right span {
-      display: block;
+      display: inline-block;
       height: 2em;
       margin-left: 5px;
       text-align: left;
-      width: 100%;
+      width: auto;
+    }
+  }
+
+  @media only screen and (max-width: 470px) {
+    .left span, .right span {
+      min-width: 100px;
     }
   }
 
