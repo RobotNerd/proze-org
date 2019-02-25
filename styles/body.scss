@@ -24,7 +24,7 @@ h1 {
 }
 
 // Tablets & desktop
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   #content {
     margin: auto;
     width: 600px;
@@ -32,12 +32,8 @@ h1 {
 }
 
 // Phone: landscape and portrait
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 599px) {
   #content {
     width: 100%;
   }
 }
-
-// // Phone: portrait
-// @media only screen and (max-width: 767px) and (orientation: portrait) {
-// }
