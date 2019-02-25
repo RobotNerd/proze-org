@@ -1,17 +1,43 @@
+@import 'variables.scss';
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background-color: #252525;
+  background-color: $background-light;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 h1 {
   font-size: 1.3em;
   font-weight: bold;
   font-variant: small-caps;
-  color: #111111;
+  color: $content-h1-color;
   padding: 1em 0 0.5em 0;
 }
 
 #content {
-  width: 100%;
-  background-color: #cccccc;
+  min-height: 100%;
 }
+
+// Tablets & desktop
+@media only screen and (min-width: 768px) {
+  #content {
+    margin: auto;
+    width: 600px;
+  }
+}
+
+// Phone: landscape and portrait
+@media only screen and (max-width: 767px) {
+  #content {
+    width: 100%;
+  }
+}
+
+// // Phone: portrait
+// @media only screen and (max-width: 767px) and (orientation: portrait) {
+// }

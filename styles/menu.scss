@@ -1,14 +1,15 @@
+@import 'variables.scss';
+
 #menu {
   width: 100%;
   height: 2em;
-  background-color: #252525;
-  color: white;
+  background-color: $background-light;
   font-variant: small-caps;
   padding: 5px 0 5px 0;
 
   a {
     display: inline-block;
-    color: white;
+    color: $menu-color;
     text-decoration: none;
   }
 
@@ -30,7 +31,7 @@
   }
 
   .selected {
-    color: darkgray;
+    color: $menu-selected-color;
   }
 
   .selected:hover {
