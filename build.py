@@ -12,6 +12,7 @@ MENU_ITEMS = [
     Menu('Tools', 'tools.html'),
     Menu('Documentation', 'documentation.html'),
 ]
+DOCS = 'docs/'
 
 
 def build_styles():
@@ -20,7 +21,7 @@ def build_styles():
         filename='styles/main.scss',
         output_style='compressed'
     )
-    with open('main.css', 'w') as f:
+    with open(DOCS + 'main.css', 'w') as f:
         f.write(css)
 
 
@@ -47,7 +48,7 @@ def generate_page_content(banner, page_name, filename):
             "content": render_page('templates/{}.jinja'.format(filename)),
         }
     )
-    with open(filename, 'w') as f:
+    with open(DOCS + filename, 'w') as f:
         f.write(htmlmin.minify(content))
 
 
