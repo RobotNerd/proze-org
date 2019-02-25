@@ -19,13 +19,13 @@ h1 {
   padding: 1em 0 0.5em 0;
 }
 
-#content {
+#page {
   min-height: 100%;
 }
 
 // Tablets & desktop
 @media only screen and (min-width: 600px) {
-  #content {
+  #page {
     margin: auto;
     width: 600px;
   }
@@ -33,7 +33,12 @@ h1 {
 
 // Phone: landscape and portrait
 @media only screen and (max-width: 599px) {
-  #content {
+  #page {
     width: 100%;
+  }
+
+  #content {
+    width: 95%;
+    margin-left: 10px;
   }
 }
