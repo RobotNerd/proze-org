@@ -38,7 +38,7 @@
     }
 
     .right {
-      margin-left: 5px;
+      margin-left: 10px;
     }
 
     .left, .right {
@@ -56,7 +56,7 @@
     }
   }
 
-  @media only screen and (max-width: 470px) {
+  @media only screen and (max-width: 495px) {
     .left span, .right span {
       min-width: 100px;
     }

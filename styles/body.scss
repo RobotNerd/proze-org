@@ -7,12 +7,15 @@ html, body {
 
 body {
   background-color: $background-light;
+  color: $content-color;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   height: 100%;
+  line-height: 1.6;
 }
 
-h1, h2 {
-  color: $content-h1-color;
+h1, h2, h3 {
+  line-height: 1.2;
   padding: 1em 0 0.5em 0;
 }
 
@@ -33,7 +36,7 @@ p, ul {
 
 li {
   list-style-type: square;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 #page {
