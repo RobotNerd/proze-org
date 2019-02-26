@@ -10,7 +10,7 @@ MENU_ITEMS = [
     Menu('Getting started', 'getting-started.html'),
     Menu('Syntax', 'syntax.html'),
     Menu('Tools', 'tools.html'),
-    Menu('Documentation', 'documentation.html'),
+    Menu('Development', 'development.html'),
 ]
 DOCS = 'docs/'
 
