@@ -1,0 +1,37 @@
+@import 'variables.scss';
+
+.proze {
+  background-color: $proze-background;
+  border-radius: 10px;
+  box-shadow: 2px 2px $proze-background-shadow;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: 90%;
+
+  p {
+    margin-left: 0;
+  }
+
+  .title, .author {
+    color: $proze-structural-markup;
+    display: block;
+    font-style: italic;
+  }
+
+  .character {
+    color: $proze-character;
+    font-style: bold;
+  }
+
+  .dialogue {
+    color:  $proze-dialogue;
+  }
+
+  .thing {
+    color: $proze-thing;
+    font-style: italic;
+  }
+}
