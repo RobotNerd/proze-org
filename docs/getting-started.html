@@ -5,4 +5,24 @@
   <span class=keyword>places:</span>
   <span class=keyword>things:</span>
   <span class=keyword>invalid:</span>
-</pre> </div> <p> This config file has placeholder lists for unique names that you're planning to use in your story. </p> <ul> <li>character: Names of characters in your story. (like Bob, Susan, King Richard)</li> <li>places: Locations in your story. (Paris, Pleasantville, the hallway)</li> <li> things: Objects in your story. This is particularly useful for uncommon items or fictional items that you made up for your story. (laser cannon, ghost monster, power blade) </li> <li> invalid: Names of characters, places, or things that should NOT be in your story. A good reason to use this is if you change a character name. Let's say you had one character named Jackie, but you decide to rename her to Sally. In this case, you should put Sally in the character name list and Jackie in the invalid list. This way, if you accidently type Jackie again, her name will be highlighted as an error. </li> </ul> <p>TODO - add names</p> <h2 id=write-your-story>Write your story</h2> <p> Now we'll add proze files with the contents of the book. We'll start by creating a file called "chapter01.proze". You can write the first chapter of your life's story in that file using the <a href=syntax.html>proze syntax</a>. </p> <p> As your story grows, you can add more proze files. The files can be named anything. In this example we're using chapters, but that isn't a requirement. You could break up a single chapter into multiple files, or you could write your entire book in a single proze file (but that's not recommended). </p> <h2 id=install-converter>Install the proze converter</h2> <p>TODO</p> <h2 id=compile-project>Compile the project</h2> <p>TODO</p> <h2 id=best-practices>Addendum: Recommended best practices</h2> <p>TODO</p> </div> </div> </body> </html>
+</pre> </div> <p> This config file has placeholder lists for unique names that you're planning to use in your story. </p> <ul> <li>character: Names of characters in your story. (like Bob, Susan, King Richard)</li> <li>places: Locations in your story. (Paris, Pleasantville, the hallway)</li> <li> things: Objects in your story. This is particularly useful for uncommon items or fictional items that you made up for your story. (laser cannon, ghost monster, power blade) </li> <li> invalid: Names of characters, places, or things that should NOT be in your story. A good reason to use this is if you change a character name. Let's say you had one character named Jackie, but you decide to rename her to Sally. In this case, you should put Sally in the character name list and Jackie in the invalid list. This way, if you accidently type Jackie again, her name will be highlighted as an error. </li> </ul> <p> Now let's add the names of some characters, places, and things that are going to appear in your memoir. And just to be safe, you want to change the names of some people to maintain their anonymity (because they did some really embarrassing things). </p> <div class=config> <pre>
+---
+<span class=keyword>names:</span>
+  <span class=keyword>characters:</span>
+    <span>- Frank</span>
+    <span>- Jill</span>
+    <span>- Omar</span>
+    <span>- William</span>
+  <span class=keyword>places:</span>
+    <span>- William & Mary College</span>
+    <span>- Paris</span>
+    <span>- Dino's Diner</span>
+  <span class=keyword>things:</span>
+    <span>- little red wagon</span>
+    <span>- diary</span>
+    <span>- toaster</span>
+  <span class=keyword>invalid:</span>
+    <span>- Arnold</span>
+    <span>- Casey</span>
+    <span>- Hansel</span>
+</pre> </div> <p> When you write your story in an editor that supports proze, these names will be automatically highlighted as you type. This allows you to immediately catch misspelled names or warns you if you're using one of the invalid names. Later, when you're converting your proze project into a document to be published, the converter tool will warn you again you if you're using any of the names in the invalid list. </p> <h2 id=write-your-story>Write your story</h2> <p> Now we'll add proze files with the contents of the book. We'll start by creating a file called "chapter01.proze". You can write the first chapter of your life's story in that file using the <a href=syntax.html>proze syntax</a>. </p> <p> As your story grows, you can add more proze files. The files can be named anything. In this example we're using chapters, but that isn't a requirement. You could break up a single chapter into multiple files, or you could write your entire book in a single proze file (but that's not recommended). </p> <h2 id=install-converter>Install the proze converter</h2> <p>TODO</p> <h2 id=compile-project>Compile the project</h2> <p>TODO</p> <h2 id=best-practices>Addendum: Recommended best practices</h2> <p>TODO</p> </div> </div> </body> </html>
