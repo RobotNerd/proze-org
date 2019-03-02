@@ -1,17 +1,17 @@
 <h1>Getting started with proze</h1>
-
 <p>
   Follow the steps in this document to learn how to use proze.
+  This guide walks you through using proze to create a book about
+  your memoir.
 </p>
 
-<h2>Use a proze-supported editor</h2>
 
+<h2 id="use-an-editor">Use a proze-supported editor</h2>
 <p>
   Proze is a text-only format, so you can write proze documents in any
   text editor. But if you can use an editor with proze support, you'll
   get more out of it.
 </p>
-
 <p>
   Currently, only the vim editor has a plugin for proze, although support
   for other editors is planned for the future. Vim users can install the
@@ -20,26 +20,93 @@
   https://github.com/RobotNerd/proze-english-vim</a>.
 </p>
 
-<h2>Create a new project</h2>
 
+<h2 id="create-project">Create a new project</h2>
+<p>
+  The quickest way to start is to create a new file with an extension
+  *.proze and just start writing. But let's be organized about it and
+  create a new project, which will be easier to work with in the long
+  run.
+</p>
+<p>
+  First, create a new folder on your computer and name it something related
+  to your project. Since w'ere writing a book about your life in this guid,
+  you can name the folder "my-memoir".
+</p>
+
+
+<h2 id="config-file">The proze config file</h2>
+<p>
+  Next you'll want to add a config file to your project folder. There
+  are <a href="https://github.com/RobotNerd/proze-english-format#configuration-file">
+  many options</a> for what can go in the config file, but we'll just add
+  the most common ones here.
+</p>
+<p>
+  Config files can be formatted as either JSON or YAML. We'll choose YAML,
+  since it's more human readable. Create a new file call config.yaml in
+  your project directory. Copy the stub config file in this next sample and
+  paste it into your file. But be careful! Spaces to the left of a line
+  in YAML are important.
+</p>
+<div class="config">
+<pre>
+---
+<span class="keyword">names:</span>
+  <span class="keyword">characters:</span>
+  <span class="keyword">places:</span>
+  <span class="keyword">things:</span>
+  <span class="keyword">invalid:</span>
+</pre>
+</div>
+<p>
+  This config file has placeholder lists for unique names that you're
+  planning to use in your story.
+</p>
+<ul>
+  <li>character: Names of characters in your story. (like Bob, Susan, King Richard)</li>
+  <li>places: Locations in your story. (Paris, Pleasantville, the hallway)</li>
+  <li>
+    things: Objects in your story. This is particularly useful for uncommon
+    items or fictional items that you made up for your story. (laser cannon,
+    ghost monster, power blade)
+  </li>
+  <li>
+    invalid: Names of characters, places, or things that should NOT be in your
+    story. A good reason to use this is if you change a character name.
+    Let's say you had one character named Jackie, but you decide to rename
+    her to Sally. In this case, you should put Sally in the character name
+    list and Jackie in the invalid list. This way, if you accidently type
+    Jackie again, her name will be highlighted as an error.
+  </li>
+</ul>
+<p>TODO - add names</p>
+
+
+<h2 id="write-your-story">Write your story</h2>
+<p>
+  Now we'll add proze files with the contents of the book. We'll start
+  by creating a file called "chapter01.proze". You can write the first
+  chapter of your life's story in that file using the
+  <a href="syntax.html">proze syntax</a>.
+</p>
+<p>
+  As your story grows, you can add more proze files. The files can be named
+  anything. In this example we're using chapters, but that isn't a requirement.
+  You could break up a single chapter into multiple files,
+  or you could write your entire book in a single proze file (but that's
+  not recommended).
+</p>
+
+
+<h2 id="install-converter">Install the proze converter</h2>
 <p>TODO</p>
 
-<h2>The proze config file</h2>
 
+<h2 id="compile-project">Compile the project</h2>
 <p>TODO</p>
 
-<h2>Write your story</h2>
 
-<p>TODO</p>
-
-<h2>Install the proze converter</h2>
-
-<p>TODO</p>
-
-<h2>Compile the project</h2>
-
-<p>TODO</p>
-
-<h2>Addendum: Recommended best practices</h2>
+<h2 id="best-practices">Addendum: Recommended best practices</h2>
 
 <p>TODO</p>
