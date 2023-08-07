@@ -2,18 +2,18 @@
   <span class="left">
     <!-- TODO icon -->
     {% if current_page == 'Home' %}
-      <span class="selected">Home</span>
+    <span class="selected">Home</span>
     {% else %}
-      <span><a href="index.html">Home</a></span>
+    <span><a href="index.html">Home</a></span>
     {% endif %}
   </span>
   <span class="right">
     {%- for item in menu_items %}
-      {% if item.name == current_page %}
-        <span class="selected">{{ item.name }}</span>
-      {% else %}
-        <span><a href="{{ item.route }}">{{ item.name }}</a></span>
-      {% endif %}
+    {% if item.name == current_page %}
+    <span class="selected">{{ item.name }}</span>
+    {% else %}
+    <span><a href="{{ item.route }}">{{ item.name }}</a></span>
+    {% endif %}
     {%- endfor %}
   </span>
 </div>
